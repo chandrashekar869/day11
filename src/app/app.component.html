@@ -1,0 +1,6 @@
+<input type="text" [(ngModel)]="selected" #input>
+<li *ngFor="let location of arr" style="cursor: pointer;" (click)="selected=location.LocalizedName">{{location.LocalizedName}}</li>
+
+<input type="text" (input)="service.changeMessage($event.target.value)" placeholder="Enter data to share">
+
+<app-child></app-child>
